@@ -3,8 +3,10 @@ import {
 	Card, 
 	CardContent,
 	CardTitle,
+	CardSubtitle,
 	CardLink,
 	CardDate,
+	CardImg,
 	TagList, 
 	TagItem
 } from "./styles";

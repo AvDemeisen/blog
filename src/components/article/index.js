@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
 import ReactMarkdown from 'react-markdown'
 import Share from "../share/share" 
 import { 
@@ -11,7 +10,8 @@ import {
     ArticleContainer,
     ArticleDate,
     ArticlePicture,
-    ArticleImg
+    ArticleImg,
+    ArticleCopy
 } from './styles'; 
 
 export default ({ link, data }) => (

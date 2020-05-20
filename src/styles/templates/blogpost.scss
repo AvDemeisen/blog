@@ -1,0 +1,10 @@
+@import "src/styles/imports";
+
+.article-container {
+    padding-bottom: 1px;
+    
+    @include sm {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+}

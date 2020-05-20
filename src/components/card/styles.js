@@ -66,6 +66,16 @@ export const CardTitle = styled(GatsbyLink)`
   font-size: $md;
   font-weight: bold;
 `
+
+export const CardSubtitle = styled.p`
+  display: none;
+  font-size: ${fontSizes["sm"]};
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+`
+
 export const CardImg = styled(Img)`
   width: 100%;
   height: 100%;

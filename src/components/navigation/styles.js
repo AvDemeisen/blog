@@ -76,3 +76,48 @@ export const SubNavLink = styled(GatsbyLink)`
     font-size: $md;
   }
 `
+
+export const NavigationInput = styled.input`
+  margin: 0;
+  padding: 5px;
+  font-size: 16px;
+  height: 50%;
+  width: 100%;
+  border: none;
+  border: 1px solid ${Colors["lightgrey"]};
+`
+
+export const NavigationLabel = styled.label`
+  width: 50%;
+  max-width: 250px;
+`
+
+export const ResultList = styled.ul`
+  top: 60px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 101;
+
+  @media (min-width: 576px) {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    max-width: 250px;
+  }
+
+  @media (min-width: 768px) {
+    right: 20px;
+  }
+`
+
+export const ResultsLink = styled(GatsbyLink)`
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: ${Colors["charcoal"]};
+
+  &:hover {
+    background-color: ${Colors["lightgrey"]};
+  }
+`

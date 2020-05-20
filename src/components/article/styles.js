@@ -64,7 +64,7 @@ export const articleCaption = styled.figcaption`
   font-size: ${fontSizes["xs"]};
   font-family: "Source Code Pro", Monaco, monospace;
 `
-export const articleCopy = styled.div`
+export const ArticleCopy = styled.div`
   @media (min-width: 768px) {
     margin-top: 10px;
   }

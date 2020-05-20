@@ -1,0 +1,86 @@
+@import "src/styles/imports";
+
+$background: $charcoal;
+$text: $white;
+$border: $white;
+
+.sidebar {
+  margin: 10px;
+
+  @include md {
+    margin: 20px;
+  }
+}
+
+.recommended {
+  background-color: $background;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 4px;
+
+  @include md {
+    padding: 20px;
+  }
+}
+
+.recommended__header {
+  margin: 0;
+  padding-bottom: 10px;
+  color: $text;
+  text-transform: capitalize;
+
+  @include md {
+    padding-botom: 20px;
+  }
+}
+
+.recommended__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recommended__item {
+  padding: 5px;
+  border: 1px solid $border;
+  color: $text;
+  text-decoration: none;
+}
+
+.recommended__link {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  height: 100%;
+  text-decoration: none;
+  font-size: $md;
+
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+
+  @include xl {
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+.recommended__image {
+  width: 120px;
+
+  @include sm {
+    width: 100%;
+  }
+}
+
+.recommended__title {
+  padding: 5px;
+  color: $text;
+
+  @include xl {
+    padding-left: 10px;
+  }
+}
