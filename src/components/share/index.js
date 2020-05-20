@@ -1,6 +1,5 @@
 import React from "react"
-
-import "./share.scss"
+import { List, ListItem, ListButton } from "./styles";
 
 export default ({url, text}) => {
   const platforms = ["twitter"]
@@ -11,14 +10,14 @@ export default ({url, text}) => {
   }
 
   return (
-    <ul className="share-list">
+    <List>
       {platforms.map(platform => (
-        <li className="share-list__item" key={platform}>
-          <button className={`share-list__button share-list__button--${platform}`} value={platform} onClick={e => share(e.target.value)}>
+        <ListItem key={platform}>
+          <ListButton value={platform} onClick={e => share(e.target.value)}>
             {platform}
-          </button>
-        </li>
+          </ListButton>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   )
 }

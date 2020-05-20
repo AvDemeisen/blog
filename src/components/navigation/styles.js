@@ -38,7 +38,7 @@ export const SubNav = styled.nav`
   top: 60px;
   height: 40px;
   width: 100%;
-  background-color: $secondaryNavBackground;
+  background-color: ${Colors["charcoal"]};
   box-sizing: border-box;
   z-index: 100;
 
@@ -64,12 +64,16 @@ export const SubNavItem = styled.li`
 
 export const SubNavLink = styled(GatsbyLink)`
   display: flex;
-  padding: $guttersm;
+  padding: ${gutterSizes["guttersm"]};
   height: 100%;
   align-items: center;
   text-decoration: none;
-  color: ${Colors["charcoal"]};
-  font-size: $sm;
+  color: ${Colors["white"]};
+  font-size: ${fontSizes["sm"]};
+
+  &:hover {
+    background-color:  ${Colors["grey"]};
+  }
 
   @media (min-width: 576px) {
     padding: $guttermd;

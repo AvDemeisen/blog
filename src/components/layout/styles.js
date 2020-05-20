@@ -44,7 +44,7 @@ export const Container = styled.div`
   display: block;
   margin: 0 auto;
   height: 100vh;
-  max-width: 900px;
+  max-width: 1200px;
   width: 100%;
   box-sizing: border-box;
   background-color: ${Colors["white"]};

@@ -1,12 +1,13 @@
 import styled from "styled-components"
+import Img from "gatsby-image"
 import { Colors, fontSizes, gutterSizes } from "../../styles/variables"
 
 export const Article = styled.article`
-  padding: ${gutterSizes["guttersm"]};
+  padding: 10px;
   max-width: 900px;
 
   @media (min-width: 768px) {
-    padding: ${gutterSizes["guttermd"]};
+    padding: 20px;
   }
 `
 
@@ -24,7 +25,7 @@ export const ArticleTitle = styled.h1`
   }
 `
 export const ArticleSubtitle = styled.h2`
-    padding: ${gutterSizes["guttermd"]};
+    margin: 0 ${gutterSizes["guttermd"]};
     font-size: ${fontSizes["lg"]};
     font-weight: normal;
 `
@@ -47,7 +48,7 @@ export const ArticlePicture = styled.picture`
   width: 100%;
 `
 
-export const ArticleImg = styled.img`
+export const ArticleImg = styled(Img)`
   margin: 0 -10px;
   height: 100%;
   width: calc(100% + 20px);
@@ -58,12 +59,13 @@ export const ArticleImg = styled.img`
   }
 `
 
-export const articleCaption = styled.figcaption`
+export const ArticleCaption = styled.figcaption`
   margin: 10px 0;
   text-transform: uppercase;
   font-size: ${fontSizes["xs"]};
   font-family: "Source Code Pro", Monaco, monospace;
 `
+
 export const ArticleCopy = styled.div`
   @media (min-width: 768px) {
     margin-top: 10px;

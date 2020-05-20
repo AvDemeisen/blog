@@ -1,7 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import ReactMarkdown from 'react-markdown'
-import Share from "../share/share" 
+import Share from "../share" 
 import { 
     Article, 
     ArticleHeader, 
@@ -11,15 +10,21 @@ import {
     ArticleDate,
     ArticlePicture,
     ArticleImg,
+    ArticleCaption,
     ArticleCopy
 } from './styles'; 
+import { TagList, TagItem, CardLink } from '../card/styles'
 
 export default ({ link, data }) => (
   <Article>
     <ArticleHeader>
-      <ul className="card-content__tag-list">
-        {data.tags.map(tag => <li className="card-content__tag-item" key={tag}><Link to={`/results/?q=${tag}`} className="card__link">{tag}</Link></li>)}
-      </ul>
+      <TagList>
+        {data.tags.map(tag => 
+        <TagItem key={tag}>
+          <CardLink to={`/results/?q=${tag}`}>{tag}</CardLink>
+        </TagItem>
+        )}
+      </TagList>
       <ArticleTitle>{data.title}</ArticleTitle>
       <ArticleSubtitle>{data.subtitle}</ArticleSubtitle>
       <ArticleContainer>
@@ -29,8 +34,8 @@ export default ({ link, data }) => (
     </ArticleHeader>
     <section>
       <ArticlePicture>
-        <ArticleImg alt={data.image.title} fluid={data.image.fluid} />
-        <figcaption className="article-body__caption">{data.image.title}</figcaption>
+        <ArticleImg alt={data.image.title} fluid={data.image.fluid}/>
+        <ArticleCaption>{data.image.title}</ArticleCaption>
       </ArticlePicture>
       <ArticleCopy>
         <ReactMarkdown source={data.copy.copy} />
