@@ -7,6 +7,7 @@ import {
 	CardLink,
 	CardDate,
 	CardImg,
+	CardImgSrc,
 	TagList, 
 	TagItem
 } from "./styles";
@@ -30,7 +31,7 @@ export default ({ data }) => (
 		<CardLink to={`/${data.slug}`} title={data.title}>
 			{data.image.fluid ?
 				<CardImg alt={data.image.title} objectFit="contain" fluid={data.image.fluid} /> :
-				<CardImg alt={data.image.fields.title} src={`${data.image.fields.file.url}?w=290&fit=scale`}></CardImg>
+				<CardImgSrc alt={data.image.fields.title} src={`${data.image.fields.file.url}?w=290&fit=scale`}></CardImgSrc>
 			}
 		</CardLink>
 	</Card>
