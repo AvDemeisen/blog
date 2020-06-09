@@ -43,7 +43,6 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
   display: block;
   margin: 0 auto;
-  height: 100vh;
   max-width: 1200px;
   width: 100%;
   box-sizing: border-box;
