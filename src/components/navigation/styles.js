@@ -3,8 +3,7 @@ import styled from "styled-components"
 import { Colors, fontSizes, gutterSizes } from "../../styles/variables"
 
 export const Navigation = styled.nav`
-  top: 0;
-  right: 0;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,10 +13,6 @@ export const Navigation = styled.nav`
   z-index: 100;
   box-sizing: border-box;
   background-color: transparent;
-
-  @media (min-width: 576px) {
-    position: relative;
-  }
 
   @media (min-width: 768px) {
     padding: ${gutterSizes["guttermd"]};
@@ -34,18 +29,12 @@ export const NavigationLogo = styled(GatsbyLink)`
 `
 
 export const SubNav = styled.nav`
-  position: fixed;
-  top: 60px;
+  position: relative;
   height: 40px;
   width: 100%;
   background-color: ${Colors["charcoal"]};
   box-sizing: border-box;
   z-index: 100;
-
-  @media (min-width: 576px) {
-    top: 0;
-    position: relative;
-  }
 `
 
 export const SubNavList = styled.ul`

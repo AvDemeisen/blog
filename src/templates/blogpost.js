@@ -11,7 +11,7 @@ const BlogPost = ({data, location}) => (
     <SEO title={data.contentfulBlogPost.title} />
     <div className="article-container">
       <Article data={data.contentfulBlogPost} link={location.href}></Article>
-      {/* <Sidebar></Sidebar> */}
+      <Sidebar></Sidebar>
     </div>
   </Layout>
 )
